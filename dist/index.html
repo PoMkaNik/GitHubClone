@@ -14,7 +14,7 @@
       <div class="text-sm text-gray-900">
         <!-- main nav -->
         <nav
-          class="flex items-center justify-between px-4 py-3 text-white bg-gray-900"
+          class="flex items-center justify-between px-8 py-4 text-white bg-gray-900"
         >
           <!-- left section -->
           <div class="flex items-center space-x-4">
@@ -37,7 +37,7 @@
             <div class="relative">
               <input
                 type="text"
-                class="px-3 py-1 text-sm placeholder-white bg-gray-900 border border-gray-700 rounded w-72"
+                class="px-3 py-1 text-sm placeholder-white bg-gray-900 border border-gray-700 rounded-md w-72"
                 placeholder="Search or jump to..."
               />
               <div class="absolute top-0 right-0 flex items-center h-full">
@@ -130,7 +130,7 @@
       </div>
       <!-- != main nav container-->
       <!-- repo data -->
-      <div class="flex items-center justify-between px-8 py-4">
+      <div class="flex items-center justify-between px-8 py-4 bg-gray-50">
         <!-- repo-data: left section -->
         <div class="flex items-center">
           <!-- icon -->
@@ -261,7 +261,9 @@
       </div>
       <!-- !=repo data -->
       <!-- repo menu -->
-      <ul class="flex items-center px-8 mt-4 border-b border-gray-400">
+      <ul
+        class="flex items-center px-8 mt-4 border-b border-gray-400 bg-gray-50"
+      >
         <!-- menu item -->
         <li class="text-sm font-semibold">
           <a
@@ -480,5 +482,680 @@
       <!-- != repo menu -->
     </header>
     <!-- != header -->
+    <!-- main content -->
+    <main class="flex flex-wrap px-8 mx-auto my-8 bg-white">
+      <!-- file explorer -->
+      <div class="w-3/4 pr-8">
+        <!-- branch navigation -->
+        <div class="flex items-center justify-between">
+          <!-- left part -->
+          <div class="flex items-center space-x-1">
+            <!-- branch dropdown -->
+            <button
+              class="flex items-center px-3 py-1 space-x-2 text-sm border border-gray-300 rounded-md hover:bg-gray-100 bg-gray-50"
+            >
+              <!-- icon before -->
+              <svg
+                class="w-4 h-4"
+                stroke="none"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"
+                />
+              </svg>
+              <!-- != icon before -->
+              <!-- button text -->
+              <span class="font-semibold">master</span>
+              <!-- != button text -->
+              <!-- icon after -->
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <!-- != icon after -->
+            </button>
+            <!-- != branch dropdown -->
+            <!-- # of branches -->
+            <a
+              href="#"
+              class="flex items-center px-3 py-1 space-x-1 text-sm group"
+            >
+              <!-- icon before -->
+              <svg
+                class="w-4 h-4 text-gray-600 group-hover:text-blue-600"
+                stroke="none"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"
+                />
+              </svg>
+              <!-- != icon before -->
+              <!-- text -->
+              <span class="font-semibold group-hover:text-blue-600">27</span>
+              <span class="font-light group-hover:text-blue-600">branches</span>
+              <!-- != text -->
+            </a>
+            <!-- != # of branches -->
+            <!-- # of tags -->
+            <a
+              href="#"
+              class="flex items-center px-1 py-1 space-x-1 text-sm group"
+            >
+              <!-- icon before -->
+              <svg
+                class="w-4 h-4 text-gray-600 group-hover:text-blue-600"
+                stroke="none"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                />
+              </svg>
+              <!-- != icon before -->
+              <!-- text -->
+              <span class="font-semibold group-hover:text-blue-600">145</span>
+              <span class="font-light group-hover:text-blue-600">tags</span>
+              <!-- != text -->
+            </a>
+            <!-- != # of tags -->
+          </div>
+          <!-- != left part -->
+          <!-- right part -->
+          <div class="flex items-center space-x-3">
+            <!-- go to file button -->
+            <button
+              class="flex items-center px-3 py-1 space-x-2 text-sm border border-gray-300 rounded-md hover:bg-gray-100 bg-gray-50"
+            >
+              <!-- button text -->
+              <span class="font-semibold">Go to file</span>
+              <!-- != button text -->
+            </button>
+            <!-- != go to file button -->
+            <!-- add file dropdown -->
+            <button
+              class="flex items-center px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-100 bg-gray-50"
+            >
+              <!-- button text -->
+              <span class="font-semibold">Add file</span>
+              <!-- != button text -->
+              <!-- icon after -->
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <!-- != icon after -->
+            </button>
+            <!-- != add file dropdown -->
+            <!-- download code button -->
+            <button
+              class="flex items-center px-3 py-1 space-x-1 text-sm text-white bg-green-600 border border-green-700 rounded-md hover:bg-green-700"
+            >
+              <!-- icon before -->
+              <svg
+                class="w-4 h-4"
+                stroke="none"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                />
+              </svg>
+              <!-- != icon before -->
+              <!-- button text -->
+              <span class="font-semibold">Code</span>
+              <!-- != button text -->
+              <!-- icon after -->
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <!-- != icon after -->
+            </button>
+            <!-- != download code button -->
+          </div>
+          <!-- != right part -->
+        </div>
+        <!-- != branch navigation -->
+        <!-- files -->
+        <!-- table header -->
+        <div
+          class="flex items-center justify-between px-3 py-3 mt-5 text-sm border border-b-0 border-blue-200 rounded-md rounded-b-none bg-blue-50"
+        >
+          <!-- left part -->
+          <div class="flex items-center space-x-2">
+            <!-- user avatar -->
+            <a href="#">
+              <img src="img/user-2.png" class="w-5 h-5" alt="user avatar" />
+            </a>
+            <!-- != user avatar -->
+            <!-- user nickname -->
+            <a href="#" class="font-semibold hover:underline">JohnDoe</a>
+            <!-- != user nickname -->
+            <!-- current tag -->
+            <a href="#" class="hover:underline hover:text-blue-600">2.0.2</a>
+            <!-- != current tag -->
+          </div>
+          <!-- != left part -->
+          <!-- right part -->
+          <div class="flex items-end space-x-3">
+            <!-- check icon -->
+            <a href="#" class="text-green-600">
+              <svg
+                aria-label="2 / 2 checks OK"
+                class="w-4 h-4"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                />
+              </svg>
+            </a>
+            <!-- != check icon -->
+            <!-- commit # -->
+            <a
+              href="#"
+              class="font-mono text-xs text-gray-600 hover:underline hover:text-blue-600"
+            >
+              f63aae7
+            </a>
+            <!-- != commit # -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="text-gray-600 hover:underline hover:text-blue-600"
+            >
+              3 days ago
+            </a>
+            <!-- != last time commit -->
+            <!-- total # of commits -->
+            <a
+              href="#"
+              class="flex items-end space-x-1 text-gray-600 hover:underline hover:text-blue-600"
+            >
+              <!-- icon -->
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"
+                />
+              </svg>
+              <!-- != icon -->
+              <!-- text -->
+              <span class="font-semibold">3,578</span>
+              <span class="">commits</span>
+              <!-- != text -->
+            </a>
+            <!-- != total # of commits -->
+          </div>
+          <!-- != right part -->
+        </div>
+        <!-- != table header -->
+        <!-- files table -->
+        <div
+          class="text-sm text-gray-700 border border-gray-300 divide-y divide-gray-300 rounded-md rounded-t-none"
+        >
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                .github
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <a href="#" class="w-6/12 hover:underline hover:text-blue-600">
+              Only run coverage in CI
+            </a>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              25 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                __tests__
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Performance improvements + memory leak fix (
+              </a>
+              <a href="#" class="text-blue-600 hover:underline">#3032</a>)
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600"> dist </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Add empty .npmignore so dist files are distributed with releases
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 years ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600"> jest </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Performance improvements + memory leak fix (
+              </a>
+              <a href="#" class="text-blue-600 hover:underline">#3032</a>)
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600"> perf </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                make some changes to compat mode
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              25 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600"> src </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Performance improvements + memory leak fix (
+              </a>
+              <a href="#" class="text-blue-600 hover:underline">#3032</a>)
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-blue-400"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                stubs
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Don't mix unitless values with units in the same scale
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 days ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-gray-600"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                .editorconfig
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Convert new stuff to use ES6 modules
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              3 years ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-gray-600"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                .file-name
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Lorem ipsum dolor sit amet.
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              2 years ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-gray-600"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                .file-name
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="hover:underline hover:text-blue-600">
+                Lorem ipsum dolor sit amet.
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              2 years ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+          <!-- one item -->
+          <div class="flex justify-between px-4 py-2 hover:bg-gray-100">
+            <span class="flex items-center w-4/12 space-x-3">
+              <!-- file icon -->
+              <svg
+                aria-label="Directory"
+                class="w-4 h-4 text-gray-600"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"
+                />
+              </svg>
+              <!-- != file icon -->
+              <!-- file name -->
+              <a href="#" class="hover:underline hover:text-blue-600">
+                .file-name
+              </a>
+              <!-- != file name -->
+            </span>
+            <!-- commit message -->
+            <span class="flex w-6/12">
+              <a href="#" class="truncate hover:underline hover:text-blue-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                laudantium unde voluptates minus. Ipsam, totam?
+              </a>
+            </span>
+            <!-- != commit message -->
+            <!-- last time commit -->
+            <a
+              href="#"
+              class="w-2/12 text-right text-gray-500 hover:underline hover:text-blue-600"
+            >
+              2 years ago
+            </a>
+            <!-- != last time commit -->
+          </div>
+          <!-- != one item -->
+        </div>
+        <!-- != files table -->
+        <!-- != files -->
+      </div>
+      <!-- != file explorer -->
+      <!-- sidebar -->
+      <div class="w-1/4">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit sunt et,
+        architecto beatae mollitia nemo. Quia, animi culpa aut est vitae harum
+        facere error fugit molestiae. Facilis fuga saepe rem.
+      </div>
+      <!-- != sidebar -->
+    </main>
+    <!-- != main content -->
   </body>
 </html>
